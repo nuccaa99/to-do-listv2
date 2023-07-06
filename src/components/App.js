@@ -1,5 +1,6 @@
 import { React, useState } from "react";
-import "../style.css"
+import "../style.css";
+import List from "./List";
 
 const App = () => {
     const [task, setTask] = useState("")
@@ -23,12 +24,7 @@ const App = () => {
             <div className="wrapper">
                 <header>To-Do.</header>
                 <div className="list--container">
-                    <div className="list">
-                        {taskList.map((task) => {
-                            return (
-                                <li key={taskList.indexOf(task)}>{task}</li>)
-                        })}
-                    </div>
+                    <List taskList={taskList} />
                     <input value={task} type="text" placeholder="new task." className="list--input" onChange={handleInputChange}></input>
                     <button type="submit" className="list--button" onClick={handleClick}>add task.</button>
                 </div>
