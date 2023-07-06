@@ -50,10 +50,19 @@ header {
     align-items: center;
 }
 
+.list--input {
+    border: none;
+    background-color: var(--secondary-light-color);
+    border-bottom: 1px solid var(--main-dark-color);
+    margin: 10px;
+    width: 80%;
+    margin-top: auto;
+   
+}
+
 .list--button {
     cursor: pointer;
     margin: 15px;
-    margin-top: auto;
     width: 80px;
     height: 30px;
     background-color: var(--main-dark-color);

@@ -8,6 +8,7 @@ const App = () => {
                 <header>To-Do.</header>
                 <div className="list--container">
                     <div className="list"></div>
+                    <input type="text" placeholder="new task." className="list--input"></input>
                     <button className="list--button">add task.</button>
                 </div>
             </div>
