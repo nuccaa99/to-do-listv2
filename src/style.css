@@ -84,11 +84,20 @@ header {
 }
 
 .list li {
+    width: 100%;
     color: var(--main-dark-color);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    
+}
+
+.task {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
 }
 
 .task--checkbox:checked+.task {
