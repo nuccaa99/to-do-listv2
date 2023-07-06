@@ -8,6 +8,7 @@ const List = ({ taskList }) => {
                     <li key={taskList.indexOf(task)}>
                         <input type="checkbox" value="task" className="task--checkbox"></input>
                         <label htmlFor="task" className="task">{task}</label>
+                        <button className="task--delete">x</button>
                     </li>
                 )
             })}

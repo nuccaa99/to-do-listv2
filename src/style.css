@@ -94,3 +94,17 @@ header {
 .task--checkbox:checked+.task {
     text-decoration: line-through;
 }
+
+.task--delete {
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 0.8em;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 7px;
+    border: none;
+    background-color: var(--main-dark-color);
+    border-radius: 3px;
+    color: var(--secondary-light-color);
+}
