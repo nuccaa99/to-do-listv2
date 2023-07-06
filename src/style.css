@@ -71,3 +71,7 @@ header {
     color: var(--main-light-color);
     font-weight: bold;
 }
+
+.list--input:focus {
+   outline: none;
+}
