@@ -1,15 +1,13 @@
 import React from "react";
+import Task from "./Task";
 
-const List = ({ taskList }) => {
+const List = ({ taskList, handleDelete }) => {
+
     return (
         <ul className="list">
             {taskList.map((task) => {
                 return (
-                    <li key={taskList.indexOf(task)}>
-                        <input type="checkbox" value="task" className="task--checkbox"></input>
-                        <label htmlFor="task" className="task">{task}</label>
-                        <button className="task--delete">x</button>
-                    </li>
+                    <Task task={task} key={taskList.indexOf(task)} handleDelete={handleDelete}/>
                 )
             })}
         </ul>
