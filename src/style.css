@@ -57,7 +57,7 @@ header {
     margin: 10px;
     width: 80%;
     margin-top: auto;
-   
+
 }
 
 .list--button {
@@ -73,5 +73,24 @@ header {
 }
 
 .list--input:focus {
-   outline: none;
+    outline: none;
+}
+
+.list {
+    width: 85%;
+    padding: 20px 5px;
+    list-style: none;
+    font-size: 0.8em;
+}
+
+.list li {
+    color: var(--main-dark-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.task--checkbox:checked+.task {
+    text-decoration: line-through;
 }

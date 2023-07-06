@@ -5,7 +5,11 @@ const List = ({ taskList }) => {
         <ul className="list">
             {taskList.map((task) => {
                 return (
-                    <li key={taskList.indexOf(task)}>{task}</li>)
+                    <li key={taskList.indexOf(task)}>
+                        <input type="checkbox" value="task" className="task--checkbox"></input>
+                        <label htmlFor="task" className="task">{task}</label>
+                    </li>
+                )
             })}
         </ul>
     )
