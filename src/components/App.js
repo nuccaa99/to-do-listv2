@@ -3,6 +3,8 @@ import "../style.css";
 import List from "./List";
 
 const App = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage, setPostPerPage] = useState(5);
     const [task, setTask] = useState("")
     const [taskList, setTaskList] = useState(() => {
         const tasks = JSON.parse(localStorage.getItem('taskList'));
@@ -32,6 +34,11 @@ const App = () => {
         setTask(event.target.value);
     }
 
+    const indexOfLastTask = currentPage * postPerPage;
+    const indexOfFirstTask = indexOfLastTask - postPerPage;
+    const currentTasks = taskList.slice(indexOfFirstTask, indexOfLastTask);
+
+    console.log(currentTasks)
 
     return (
         <div className="container">
