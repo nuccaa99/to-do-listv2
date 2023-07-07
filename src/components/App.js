@@ -1,14 +1,25 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "../style.css";
 import List from "./List";
 
 const App = () => {
     const [task, setTask] = useState("")
-    const [taskList, setTaskList] = useState([]);
+    const [taskList, setTaskList] = useState(() => {
+        const tasks = JSON.parse(localStorage.getItem('taskList'));
+        return tasks || [];
+    });
+
+
+    useEffect(() => {
+        localStorage.setItem('taskList', JSON.stringify(taskList));
+    }, [taskList]);
+
 
     const handleAdd = (event) => {
         event.preventDefault();
-        setTaskList([...taskList, task])
+        if (task.length > 0) {
+            setTaskList([...taskList, task])
+        }
         setTask("")
     }
 
@@ -18,9 +29,7 @@ const App = () => {
     }
 
     const handleInputChange = (event) => {
-        if (event.target.value.length > 0) {
-            setTask(event.target.value);
-        }
+        setTask(event.target.value);
     }
 
 

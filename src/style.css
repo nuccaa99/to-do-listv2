@@ -88,7 +88,7 @@ header {
     color: var(--main-dark-color);
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
     
 }
@@ -104,7 +104,12 @@ header {
     text-decoration: line-through;
 }
 
+.task--checkbox {
+    margin-top: 3px;
+}
+
 .task--delete {
+    margin-top: 3px;
     margin-left: auto;
     cursor: pointer;
     font-size: 0.8em;
