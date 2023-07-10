@@ -11,6 +11,11 @@ body,
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: var(--main-dark-color)
+}
+
 
 :root {
     --main-light-color: #C4B2BC;
@@ -42,7 +47,7 @@ header {
 
 .list--container {
     background-color: var(--secondary-light-color);
-    height: 400px;
+    height: 450px;
     width: 350px;
     border-radius: 10px;
     display: flex;
@@ -90,14 +95,14 @@ header {
     flex-direction: row;
     align-items: flex-start;
     gap: 5px;
-    
+
 }
 
 .task {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    
+
 }
 
 .task--checkbox:checked+.task {
@@ -108,18 +113,29 @@ header {
     margin-top: 3px;
 }
 
-.task--delete {
+.fa-solid.fa-delete-left {
     margin-top: 3px;
     margin-left: auto;
     cursor: pointer;
+}
+
+.pagination--container {
+    padding: 0px 10px 10px 10px;
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+    gap: 5px;
     font-size: 0.8em;
+    color: var(--main-dark-color);
+
+}
+
+.page--link:focus {
     font-weight: bold;
-    width: 14px;
-    height: 14px;
-    text-align: center;
-    line-height: 7px;
-    border: none;
-    background-color: var(--main-dark-color);
-    border-radius: 3px;
-    color: var(--secondary-light-color);
+}
+
+.page--link:hover {
+    text-decoration: underline;
 }

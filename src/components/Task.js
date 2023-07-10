@@ -5,7 +5,7 @@ const Task = ({ task, handleDelete }) => {
         <li >
             <input type="checkbox" value="task" className="task--checkbox"></input>
             <label htmlFor="task" className="task">{task}</label>
-            <button className="task--delete" onClick={() => handleDelete(task)}>x</button>
+            <i className="fa-solid fa-delete-left" onClick={() => handleDelete(task)}></i>
         </li>
     )
 }
