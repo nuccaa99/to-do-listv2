@@ -5,7 +5,7 @@ import Pagination from "./Pagination";
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [taskPerPage] = useState(12);
+    const [taskPerPage] = useState(3);
     const [task, setTask] = useState("")
     const [taskList, setTaskList] = useState(() => {
         const tasks = JSON.parse(localStorage.getItem('taskList'));
@@ -22,7 +22,11 @@ const App = () => {
         if (task.length > 0) {
             setTaskList([...taskList, task])
         }
+        if (taskList.length > taskPerPage - 1 && taskList.length % taskPerPage === 0) {
+            setCurrentPage(prevState => prevState + 1)
+        }
         setTask("")
+
     }
 
     const handleDelete = (task) => {
@@ -32,16 +36,19 @@ const App = () => {
 
     const handleInputChange = (event) => {
         setTask(event.target.value);
+
     }
+
 
     const indexOfLastTask = currentPage * taskPerPage;
     const indexOfFirstTask = indexOfLastTask - taskPerPage;
     const currentTasks = taskList.slice(indexOfFirstTask, indexOfLastTask);
 
+
+
     const paginate = (page) => {
         setCurrentPage(page)
     }
-
 
     return (
         <div className="container">
@@ -51,7 +58,7 @@ const App = () => {
                     <List taskList={currentTasks} handleDelete={handleDelete} />
                     <input value={task} type="text" placeholder="new task." className="list--input" onChange={handleInputChange}></input>
                     <button type="submit" className="list--button" onClick={handleAdd}>add task.</button>
-                    <Pagination taskPerPage={taskPerPage} totalTasks={taskList.length} paginate={paginate} />
+                    <Pagination currentPage={currentPage} taskPerPage={taskPerPage} totalTasks={taskList.length} paginate={paginate} />
                 </form>
             </div>
         </div>
