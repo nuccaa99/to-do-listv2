@@ -47,12 +47,12 @@ const App = () => {
         <div className="container">
             <div className="wrapper">
                 <header>To-Do.</header>
-                <div className="list--container">
+                <form className="list--container">
                     <List taskList={currentTasks} handleDelete={handleDelete} />
                     <input value={task} type="text" placeholder="new task." className="list--input" onChange={handleInputChange}></input>
                     <button type="submit" className="list--button" onClick={handleAdd}>add task.</button>
                     <Pagination taskPerPage={taskPerPage} totalTasks={taskList.length} paginate={paginate} />
-                </div>
+                </form>
             </div>
         </div>
     )
