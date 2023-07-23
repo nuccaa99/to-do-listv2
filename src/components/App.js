@@ -29,13 +29,18 @@ const App = () => {
 
     const handleDelete = (task) => {
         setTaskList(taskList.filter((item) => item !== task))
-        console.log(taskList.length)
+
+        if (taskList.length > taskPerPage) {
+            const lastItemOnPage = (taskList.length) % taskPerPage
+            if (lastItemOnPage === 1) {
+                setCurrentPage(prevState => prevState - 1)
+            }
+        }
     }
 
 
     const handleInputChange = (event) => {
         setTask(event.target.value);
-
     }
 
 

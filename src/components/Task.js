@@ -1,6 +1,7 @@
 import React from "react";
 
 const Task = ({ task, handleDelete }) => {
+    
     return (
         <li >
             <input type="checkbox" value="task" className="task--checkbox"></input>
