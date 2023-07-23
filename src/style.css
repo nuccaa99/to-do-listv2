@@ -103,7 +103,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    line-break: anywhere;
 }
 
 .task--checkbox:checked+.task {

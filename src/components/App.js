@@ -5,7 +5,7 @@ import Pagination from "./Pagination";
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [taskPerPage] = useState(3);
+    const [taskPerPage] = useState(12);
     const [task, setTask] = useState("")
     const [taskList, setTaskList] = useState(() => {
         const tasks = JSON.parse(localStorage.getItem('taskList'));
