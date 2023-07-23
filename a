@@ -1,0 +1,89 @@
+[33mcommit 898ceae4fc4397ae9a130ac0fd093e2a26e3bd12[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 20 17:20:41 2023 +0400
+
+    when task is added on a new page the new page appears on the screen
+
+[33mcommit d08674d157be9282d0a41da6564c14a660e5eb06[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 20 16:25:07 2023 +0400
+
+    added enter funct
+
+[33mcommit e06f6baf5b166732dda9f188ed09e4f2e9ba5388[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Mon Jul 10 12:38:26 2023 +0400
+
+    added pagination component and logic
+
+[33mcommit 23a7b2154f3f66daee69674702e8fbfd5dca82b8[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 17:39:53 2023 +0400
+
+    implemented pagination
+
+[33mcommit 9be738fd4f5677722b942d44e78e4391b2b40c5b[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 17:13:13 2023 +0400
+
+    added data to localstorage
+
+[33mcommit b006a4f60bb70b5a5e0f9bc5ef50de33782fab89[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 02:23:59 2023 +0400
+
+    minor style changes
+
+[33mcommit 5a4642a581cb7bed047128c60f4b9735d1a96a77[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 01:34:25 2023 +0400
+
+    added delete functionality
+
+[33mcommit 9963cf8784566f8a6565676fb534910cf774520d[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 00:52:14 2023 +0400
+
+    added delete button to each task
+
+[33mcommit ff30c16102b405359c3df3099d07d19c34ec4e07[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Fri Jul 7 00:39:59 2023 +0400
+
+    added checkbox to each task
+
+[33mcommit c45d370587c8c94416f3675ec8f325148f1b9cd4[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 23:41:38 2023 +0400
+
+    created list component
+
+[33mcommit 1ed1a4dd47162bca3c4f763ee3ed86b5014d8314[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 23:36:43 2023 +0400
+
+    add task adding action
+
+[33mcommit 49fd8ff1e51d34d66b8f1fb41d81a40f85f9a209[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 22:42:43 2023 +0400
+
+    added input
+
+[33mcommit 7f8003d59a6b3a6b52bfb7703e73fb130cab93a5[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 22:35:35 2023 +0400
+
+    added add button
+
+[33mcommit 84a681aa69b5006e1fefff53fb9ebe60f674b6e2[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 22:31:00 2023 +0400
+
+    initial commit
+
+[33mcommit 3e154e0a8602675ab8e2277ac87613c8e0a6536d[m
+Author: Nino (Nutsa) Kharazishvili <nutsa1999@gmail.com>
+Date:   Thu Jul 6 22:06:48 2023 +0400
+
+    Initialize project using Create React App
