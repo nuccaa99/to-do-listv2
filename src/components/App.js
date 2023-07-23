@@ -24,9 +24,7 @@ const App = () => {
         }
         const curPage = Math.ceil((taskList.length + 1) / taskPerPage)
         setCurrentPage(curPage)
-
         setTask("")
-
     }
 
     const handleDelete = (task) => {

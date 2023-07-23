@@ -133,10 +133,11 @@ header {
 
 }
 
-.page--link:focus {
-    font-weight: bold;
-}
 
 .page--link:hover {
     text-decoration: underline;
+}
+
+.page--link--active {
+    font-weight: bold;
 }

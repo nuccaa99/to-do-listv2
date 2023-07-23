@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ taskPerPage, totalTasks, paginate }) => {
+const Pagination = ({ taskPerPage, totalTasks, paginate, currentPage }) => {
     const pageNumbers = [];
 
 
@@ -14,7 +14,7 @@ const Pagination = ({ taskPerPage, totalTasks, paginate }) => {
                 {pageNumbers.map((page) => {
                     return (
                         <li key={page} className="page--item">
-                            <a href="!#" className="page--link" onClick={() => { paginate(page) }}>
+                            <a href="!#" className={`${currentPage === page ? "page--link--active" : "page--link"}`} onClick={() => { paginate(page) }}>
                                 {page}
                             </a>
                         </li>
