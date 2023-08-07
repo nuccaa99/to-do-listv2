@@ -5,7 +5,7 @@ import Pagination from "./Pagination";
 
 const App = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [taskPerPage] = useState(12);
+    const [taskPerPage] = useState(2);
     const [task, setTask] = useState("")
     const [taskList, setTaskList] = useState(() => {
         const tasks = JSON.parse(localStorage.getItem('taskList'));
@@ -30,25 +30,19 @@ const App = () => {
     const handleDelete = (task) => {
         setTaskList(taskList.filter((item) => item !== task))
 
-        if (taskList.length > taskPerPage) {
-            const lastItemOnPage = (taskList.length) % taskPerPage
-            if (lastItemOnPage === 1) {
-                setCurrentPage(prevState => prevState - 1)
-            }
-        }
     }
-
 
     const handleInputChange = (event) => {
         setTask(event.target.value);
     }
 
-
     const indexOfLastTask = currentPage * taskPerPage;
     const indexOfFirstTask = indexOfLastTask - taskPerPage;
     const currentTasks = taskList.slice(indexOfFirstTask, indexOfLastTask);
 
-
+    if (currentTasks.length === 0 && taskList.length > 0) {
+        setCurrentPage(prevState => prevState - 1)
+    }
 
     const paginate = (page) => {
         setCurrentPage(page)
